@@ -1090,6 +1090,7 @@
   ./virtualisation/amazon-options.nix
   ./virtualisation/hyperv-guest.nix
   ./virtualisation/kvmgt.nix
+  ./virtualisation/oci-options.nix
   ./virtualisation/openvswitch.nix
   ./virtualisation/parallels-guest.nix
   ./virtualisation/podman.nix
