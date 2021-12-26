@@ -916,11 +916,9 @@ in
               then "/nix/.ro-store"
               else share.target;
           value.device = tag;
-          value.fsType = "9p";
+          value.fsType = "virtiofs";
           value.neededForBoot = true;
-          value.options =
-            [ "trans=virtio" "version=9p2000.L"  "msize=${toString cfg.msize}" ]
-            ++ lib.optional (tag == "nix-store") "cache=loose";
+          value.options = [];
         };
     in
       mkVMOverride (cfg.fileSystems //
